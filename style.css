@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; /*10px*/
+}
+
+html {
+  --bg-body: #22212c;
+  --bg-card: #302f3d;
+  --font-color: #837e9f;
+  --ff-body: 'Merriweather Sans', sans-serif;
+}
+
+::-webkit-scrollbar {
+  background: var(--bg-body);
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cb92b100;
+  border-radius: 9rem;
+  border: 0.5px solid rgba(255, 255, 255, 0.404);
+}
+
+/* ============ */
+
+body {
+  width: 100vw;
+  padding: 5rem 5rem 0 4rem;
+  background: var(--bg-body);
+  color: var(--font-color);
+  font-family: var(--ff-body);
+
+  font-size: 1.4rem;
+  overflow-x: hidden;
+}
+
+#page {
+  display: grid;
+  grid-template-columns: 34.8rem 1fr;
+  gap: 5rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#side-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* === lat1 ========= */
+
+#side-card .lat1 {
+  text-align: center;
+  background: var(--bg-card);
+  border-radius: 2rem;
+  width: 34.8rem;
+  height: 29.2rem;
+}
+
+.lat1 img {
+  padding: 1px;
+  width: 12.8rem;
+  border: 2px solid #0f0;
+  border-radius: 9rem;
+  margin-block: 3rem;
+  object-fit: contain;
+}
+
+.lat1 h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.lat1 p {
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+/* === lat2 ======== */
+.lat2 {
+  padding: 3rem 4rem;
+}
+
+.lat2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.lat2 ul li,
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.lat2 li a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.lat2 a img {
+  margin-right: 2rem;
+}
+
+/* === lat3 ========= */
+
+.lat3,
+.lat4,
+.lat5 {
+  padding: 3rem 2rem;
+}
+
+.lat3 h2,
+.lat4 h2,
+.lat5 h2 {
+  margin-bottom: 2rem;
+}
+
+.lat3 .techs div + div {
+  margin-block: 1.5rem;
+}
+
+.techs div {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-inline: 1rem;
+}
+
+.lat3 span {
+  text-align: center;
+  width: 8.6rem;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  background: #cb92b1;
+  border-radius: 9rem;
+  padding: 0.6rem 0;
+}
+
+/* === lat4 =========== */
+
+.lat4 ul,
+.lat5 ul {
+  font-weight: 300;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ============= */
+
+#main-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.my-projects {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-projects span {
+  font-weight: 400;
+}
+
+/* === #projects ============ */
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#projects .project1,
+.project2 {
+  padding: 3rem;
+}
+
+#projects .project1 .folder,
+#projects .project2 .folder {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#projects .project1 span,
+.project2 span {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.project1 p,
+.project2 p {
+  line-height: 2rem;
+  margin: 2rem 0 3rem;
+}
+
+.infos {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.info img {
+  /* margin-right: .8rem; */
+}
+
+.infos > div:nth-child(2) {
+  margin-inline: 1.5rem 38%;
+}
+
+/* === recent-posts - post ========== */
+
+.recent-posts {
+  padding: 3rem;
+}
+
+#post {
+  padding: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+#post #dev /*img*/ {
+  width: 12.8rem;
+  border-radius: 9rem;
+}
+
+#post .publication h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.publication #upload /*span*/ {
+  display: inline-block;
+  margin-block: 1rem 2.5rem;
+  font-weight: 400;
+}
+
+.publication p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.publication .hasts {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ============= */
+footer {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin-block: 2rem;
+}
